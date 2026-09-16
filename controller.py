@@ -49,6 +49,26 @@ class StaticController:
         return kc, STATIC_TIER_BY_KC[kc]
 
 
+class StaticMatchedController:
+    """A "well-tuned" non-adaptive baseline: same fixed rotation as StaticController,
+    but every KC gets the same, population-appropriate tier, rather than the
+    original game's per-KC assignment (which happens to mismatch one KC badly).
+    All KCs draw initial skill from the same distribution (Section 3.5), so
+    there is no principled reason for a fixed baseline to treat KCs differently
+    here -- this isolates how much of StaticController's poor equity was an
+    avoidable, arbitrary design choice versus inherent to non-adaptive difficulty."""
+
+    def __init__(self, tier: str):
+        self._cycle = list(KCS)
+        self._i = 0
+        self.tier = tier
+
+    def choose_encounter(self, mastery: dict, last_practiced: dict, streak: dict, encounter_idx: int):
+        kc = self._cycle[self._i % len(self._cycle)]
+        self._i += 1
+        return kc, self.tier
+
+
 class AdaptiveController:
     def __init__(self):
         self.bandits = {
