@@ -85,6 +85,14 @@ Colors are the first three slots of the dataviz skill's validated categorical pa
 
 Figure 3 went through one real correction worth knowing about if extending this script: the first version averaged true_skill only over learners still being actively practiced at each attempt number. Since a learner stops being served a KC once it's confirmed-mastered, and confirmation correlates with being a stronger learner, the surviving "still being practiced" sample skews toward strugglers over time — producing a curve for full adaptive that appeared to peak around 0.60 and then decline, flatly contradicting Table 2's actual final mean of 0.75. The fix was to forward-fill each learner's last known value and average over all 200 learners at every point in the session, so the curve's right-hand edge reproduces Table 2 by construction rather than by coincidence.
 
+## LaTeX / Overleaf version (`main.tex`)
+
+A full LaTeX version of the manuscript, using the standard `article` class rather than MDPI's proprietary class file (which isn't available here, and guessing at its exact macro syntax would produce a document that fails to compile without it). This compiles immediately on Overleaf -- e.g. via "New Project > Import from GitHub" pointed at this repo -- with zero extra setup, and its section structure mirrors MDPI's Front Matter/Body/Back Matter organization so migrating the content into MDPI's official template later should be close to copy-paste.
+
+Before committing, verified (not assumed): every `\begin`/`\end` environment pair balances, all 38 `\cite{}` references match exactly one `\bibitem{}` (none missing, none unused), every referenced figure file exists on disk, and there are no unescaped `%`, `&`, `_`, `#`, or unbalanced `$` -- common sources of silent LaTeX breakage. `figure4_architecture.py` renders Section 3.4's architecture diagram as an actual image, since it previously existed only as Mermaid markup with no LaTeX equivalent.
+
+Genuinely unresolved items (affiliation, funding statement, author-contribution role split, a Zenodo DOI for this repo) are marked as `%TODO` comments in `main.tex` (invisible in the compiled PDF) or bracketed placeholder text where leaving them silently blank would be worse.
+
 ## Well-tuned static baseline (`well_tuned_baseline_check.py`)
 
 Tests a fourth condition (Section 4.8 of the manuscript): the same fixed rotation as the static baseline, but every concept assigned the single population-appropriate tier rather than the original game's mismatched per-concept assignment. Since all five concepts draw initial skill from the same distribution, there's no principled reason a fixed baseline should treat them differently -- a quick 3-way sweep (Easy/Medium/Hard, all concepts) found Medium dominates on every metric.
