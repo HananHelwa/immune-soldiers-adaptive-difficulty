@@ -85,6 +85,10 @@ Colors are the first three slots of the dataviz skill's validated categorical pa
 
 Figure 3 went through one real correction worth knowing about if extending this script: the first version averaged true_skill only over learners still being actively practiced at each attempt number. Since a learner stops being served a KC once it's confirmed-mastered, and confirmation correlates with being a stronger learner, the surviving "still being practiced" sample skews toward strugglers over time — producing a curve for full adaptive that appeared to peak around 0.60 and then decline, flatly contradicting Table 2's actual final mean of 0.75. The fix was to forward-fill each learner's last known value and average over all 200 learners at every point in the session, so the curve's right-hand edge reproduces Table 2 by construction rather than by coincidence.
 
+## Graphical Abstract (`graphical_abstract.py`)
+
+Generates MDPI's required Graphical Abstract: a schematic before/after diagram (fixed vs. adaptive difficulty, plus the AI-layer feedback loop), deliberately distinct in style from Figures 1-3 so it doesn't duplicate a body figure. The "before" bar heights are the real Table 2 static-condition values, not illustrative numbers. Two real bugs fixed during development, in case the script is extended: (1) the bar-group column width was computed incorrectly, causing bars to overlap the center diagram; (2) Unicode checkmark/X glyphs fell back to a broken symbol font once Arial was set (Arial lacks those glyphs) -- fixed by using plain ASCII "X" and a hand-drawn vector checkmark instead of any font-dependent glyph.
+
 ## Headline pattern after all of the above (N=200, seed 20260912)
 
 - **Static baseline** creates a "difficulty trap": KCs whose fixed tier happens
