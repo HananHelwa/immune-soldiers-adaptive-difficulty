@@ -1,0 +1,197 @@
+{
+  "static_baseline": {
+    "n_learners": 200,
+    "time_to_mastery": {
+      "innate_immunity": {
+        "mean_encounters_to_mastery_model": 59.31818181818182,
+        "mean_encounters_to_mastery_true": 81.31944444444444,
+        "censored_model_frac": 0.01,
+        "censored_true_frac": 0.64
+      },
+      "antigen_recognition": {
+        "mean_encounters_to_mastery_model": 62.02564102564103,
+        "mean_encounters_to_mastery_true": 86.16129032258064,
+        "censored_model_frac": 0.025,
+        "censored_true_frac": 0.69
+      },
+      "cell_mediated_immunity": {
+        "mean_encounters_to_mastery_model": 84.24409448818898,
+        "mean_encounters_to_mastery_true": 91.0,
+        "censored_model_frac": 0.365,
+        "censored_true_frac": 0.475
+      },
+      "humoral_immunity": {
+        "mean_encounters_to_mastery_model": 83.39855072463769,
+        "mean_encounters_to_mastery_true": 88.45045045045045,
+        "censored_model_frac": 0.31,
+        "censored_true_frac": 0.445
+      },
+      "tolerance_autoimmunity": {
+        "mean_encounters_to_mastery_model": 99.45454545454545,
+        "mean_encounters_to_mastery_true": 81.79411764705883,
+        "censored_model_frac": 0.945,
+        "censored_true_frac": 0.83
+      }
+    },
+    "final_mastery": {
+      "innate_immunity": {
+        "mean_final_model_mastery": 0.9999996363925692,
+        "mean_final_true_skill": 0.6846065071259314
+      },
+      "antigen_recognition": {
+        "mean_final_model_mastery": 0.996870734910082,
+        "mean_final_true_skill": 0.6821865495535211
+      },
+      "cell_mediated_immunity": {
+        "mean_final_model_mastery": 0.8690503325909389,
+        "mean_final_true_skill": 0.7611829221017861
+      },
+      "humoral_immunity": {
+        "mean_final_model_mastery": 0.8995943038095505,
+        "mean_final_true_skill": 0.7923363994784326
+      },
+      "tolerance_autoimmunity": {
+        "mean_final_model_mastery": 0.21669740994155906,
+        "mean_final_true_skill": 0.4010388703442805
+      }
+    },
+    "challenge_skill_balance": 0.21758333333333332,
+    "engagement": {
+      "mean_frustration": 0.2014708333333346,
+      "mean_boredom": 0.24549166666666608,
+      "sd_frustration": 0.35727153087270586,
+      "sd_boredom": 0.37201341778640845
+    },
+    "estimator_calibration_r": 0.7566345149099775
+  },
+  "full_adaptive": {
+    "n_learners": 200,
+    "time_to_mastery": {
+      "innate_immunity": {
+        "mean_encounters_to_mastery_model": 93.65517241379311,
+        "mean_encounters_to_mastery_true": 91.72549019607843,
+        "censored_model_frac": 0.275,
+        "censored_true_frac": 0.745
+      },
+      "antigen_recognition": {
+        "mean_encounters_to_mastery_model": 93.04255319148936,
+        "mean_encounters_to_mastery_true": 90.97916666666667,
+        "censored_model_frac": 0.295,
+        "censored_true_frac": 0.76
+      },
+      "cell_mediated_immunity": {
+        "mean_encounters_to_mastery_model": 93.87412587412588,
+        "mean_encounters_to_mastery_true": 92.67924528301887,
+        "censored_model_frac": 0.285,
+        "censored_true_frac": 0.735
+      },
+      "humoral_immunity": {
+        "mean_encounters_to_mastery_model": 93.0,
+        "mean_encounters_to_mastery_true": 91.96363636363637,
+        "censored_model_frac": 0.295,
+        "censored_true_frac": 0.725
+      },
+      "tolerance_autoimmunity": {
+        "mean_encounters_to_mastery_model": 95.23972602739725,
+        "mean_encounters_to_mastery_true": 89.125,
+        "censored_model_frac": 0.27,
+        "censored_true_frac": 0.68
+      }
+    },
+    "final_mastery": {
+      "innate_immunity": {
+        "mean_final_model_mastery": 0.9725399312693078,
+        "mean_final_true_skill": 0.7481262681405582
+      },
+      "antigen_recognition": {
+        "mean_final_model_mastery": 0.9678913949591922,
+        "mean_final_true_skill": 0.7387358172544302
+      },
+      "cell_mediated_immunity": {
+        "mean_final_model_mastery": 0.9644542519243613,
+        "mean_final_true_skill": 0.7514846838623632
+      },
+      "humoral_immunity": {
+        "mean_final_model_mastery": 0.9641096234728883,
+        "mean_final_true_skill": 0.7517180101020482
+      },
+      "tolerance_autoimmunity": {
+        "mean_final_model_mastery": 0.9711751976174559,
+        "mean_final_true_skill": 0.7503732055812468
+      }
+    },
+    "challenge_skill_balance": 0.3533604887983707,
+    "engagement": {
+      "mean_frustration": 0.12265321236808223,
+      "mean_boredom": 0.04168903906683862,
+      "sd_frustration": 0.2637378086502965,
+      "sd_boredom": 0.12498581449193953
+    },
+    "estimator_calibration_r": 0.708852240587094
+  },
+  "ablation_random_tier": {
+    "n_learners": 200,
+    "time_to_mastery": {
+      "innate_immunity": {
+        "mean_encounters_to_mastery_model": 95.5,
+        "mean_encounters_to_mastery_true": 93.48780487804878,
+        "censored_model_frac": 0.66,
+        "censored_true_frac": 0.795
+      },
+      "antigen_recognition": {
+        "mean_encounters_to_mastery_model": 95.5072463768116,
+        "mean_encounters_to_mastery_true": 89.2439024390244,
+        "censored_model_frac": 0.655,
+        "censored_true_frac": 0.795
+      },
+      "cell_mediated_immunity": {
+        "mean_encounters_to_mastery_model": 94.63888888888889,
+        "mean_encounters_to_mastery_true": 92.70588235294117,
+        "censored_model_frac": 0.64,
+        "censored_true_frac": 0.83
+      },
+      "humoral_immunity": {
+        "mean_encounters_to_mastery_model": 93.66666666666667,
+        "mean_encounters_to_mastery_true": 100.41025641025641,
+        "censored_model_frac": 0.67,
+        "censored_true_frac": 0.805
+      },
+      "tolerance_autoimmunity": {
+        "mean_encounters_to_mastery_model": 95.45833333333333,
+        "mean_encounters_to_mastery_true": 94.8974358974359,
+        "censored_model_frac": 0.64,
+        "censored_true_frac": 0.805
+      }
+    },
+    "final_mastery": {
+      "innate_immunity": {
+        "mean_final_model_mastery": 0.9434056139490181,
+        "mean_final_true_skill": 0.7098721158473935
+      },
+      "antigen_recognition": {
+        "mean_final_model_mastery": 0.9305342760166684,
+        "mean_final_true_skill": 0.6998505468790424
+      },
+      "cell_mediated_immunity": {
+        "mean_final_model_mastery": 0.9418918309820085,
+        "mean_final_true_skill": 0.6952189648911079
+      },
+      "humoral_immunity": {
+        "mean_final_model_mastery": 0.949854736023549,
+        "mean_final_true_skill": 0.7075082977459375
+      },
+      "tolerance_autoimmunity": {
+        "mean_final_model_mastery": 0.938328625765056,
+        "mean_final_true_skill": 0.6916571491404911
+      }
+    },
+    "challenge_skill_balance": 0.2591394087808291,
+    "engagement": {
+      "mean_frustration": 0.2514386916214785,
+      "mean_boredom": 0.03270290362077969,
+      "sd_frustration": 0.35430078292703415,
+      "sd_boredom": 0.1208290904936138
+    },
+    "estimator_calibration_r": 0.6777081888223833
+  }
+}
